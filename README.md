@@ -1,24 +1,58 @@
-# README
+Rails Skeleton
+==============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Dependencies
+------------
 
-* Ruby version
+* **Ruby**: 1.1.1.example
+* **Postgresql**: 1.1.1.example
 
-* System dependencies
 
-* Configuration
+Setup
+-----
 
-* Database creation
+### Install required gems
 
-* Database initialization
+```bash
+./install-gems.sh
+```
 
-* How to run the test suite
+### Configure database
 
-* Services (job queues, cache servers, search engines, etc.)
+* Modify `config/database.yml` with your database credentials.
 
-* Deployment instructions
+### Setup database
 
-* ...
+```bash
+bundle exec rails db:create
+bundle exec rails db:test:prepare
+```
+
+### Run tests
+
+```bash
+./test.sh
+```
+
+
+Common Tasks
+------------
+
+Run development server locally:
+
+```bash
+bundle exec rails server
+```
+
+Run interactive console:
+
+```bash
+bundle exec rails console
+```
+
+Deployment instructions
+-----------------------
+
+* Heroku automation deploys branches from Github whenever they are updated
+* The branch chosen by Heroku for any given environment is configured in Heroku's web interface
