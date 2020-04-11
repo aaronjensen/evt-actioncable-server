@@ -5,8 +5,8 @@ class CountsController < ApplicationController
 
   def index
     render json: { data: [
-      { id: 1, count: 2 },
-      { id: 2, count: 3 },
+      { id: 1, value: 2 },
+      { id: 2, value: 3 },
     ] }
   end
 
