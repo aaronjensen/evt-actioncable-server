@@ -4,3 +4,4 @@
 /public/assets
 /config/master.key
 /gems
+/settings/message_store_postgres.json

@@ -1,3 +1,9 @@
+PATH
+  remote: ../count-component
+  specs:
+    count_component (0.0.0)
+      eventide-postgres
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +70,98 @@ GEM
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
+    eventide-postgres (2.0.0.1)
+      evt-consumer-postgres
+      evt-entity_snapshot-postgres
+      evt-entity_store
+    evt-async_invocation (2.0.0.0)
+    evt-attribute (2.0.0.0)
+    evt-casing (2.0.0.0)
+    evt-clock (2.3.1.0)
+      evt-mimic
+    evt-configure (2.0.0.1)
+    evt-consumer (2.2.0.1)
+      evt-configure
+      evt-messaging
+      evt-poll
+      evt-settings
+      ntl-actor
+    evt-consumer-postgres (2.3.0.1)
+      evt-consumer
+      evt-messaging-postgres
+    evt-dependency (2.0.0.0)
+      evt-subst_attr
+    evt-entity_cache (2.0.0.1)
+      evt-configure
+      evt-message_store
+      evt-settings
+      evt-telemetry
+    evt-entity_projection (2.0.1.2)
+      evt-messaging
+    evt-entity_snapshot-postgres (2.1.0.1)
+      evt-entity_store
+      evt-messaging-postgres
+    evt-entity_store (2.0.0.2)
+      evt-entity_cache
+      evt-entity_projection
+    evt-identifier-uuid (2.1.0.2)
+    evt-initializer (2.0.0.0)
+      evt-attribute
+    evt-invocation (2.2.0.0)
+    evt-log (2.1.1.1)
+      evt-clock
+      evt-dependency
+      evt-initializer
+      evt-telemetry
+      terminal_colors
+    evt-message_store (2.3.0.1)
+      evt-async_invocation
+      evt-casing
+      evt-identifier-uuid
+      evt-initializer
+      evt-schema
+      evt-transform
+      evt-virtual
+    evt-message_store-postgres (2.4.0.2)
+      evt-log
+      evt-message_store
+      evt-settings
+      message-db
+      pg
+    evt-messaging (2.5.1.0)
+      evt-message_store
+    evt-messaging-postgres (2.0.0.0)
+      evt-message_store-postgres
+      evt-messaging
+    evt-mimic (2.3.1.1)
+      evt-invocation
+    evt-poll (2.0.0.0)
+      evt-clock
+      evt-log
+      evt-telemetry
+    evt-reflect (2.2.0.0)
+    evt-schema (2.2.2.0)
+      evt-attribute
+      evt-set_attributes
+      evt-validate
+      evt-virtual
+    evt-set_attributes (2.2.0.0)
+    evt-settings (2.1.0.1)
+      evt-casing
+      evt-log
+    evt-subst_attr (2.1.0.2)
+      evt-attribute
+      evt-mimic
+      evt-reflect
+    evt-telemetry (2.4.0.1)
+      evt-clock
+      evt-dependency
+    evt-transform (2.0.0.0)
+      evt-log
+      evt-reflect
+    evt-validate (2.0.0.0)
+      evt-reflect
+    evt-virtual (2.0.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.2)
@@ -77,6 +175,7 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    message-db (2.0.2)
     method_source (1.0.0)
     mimemagic (0.3.4)
     mini_mime (1.0.2)
@@ -86,6 +185,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    ntl-actor (1.3.0)
     pg (1.2.3)
     puma (4.3.3)
       nio4r (~> 2.0)
@@ -127,6 +227,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    terminal_colors (1.0.0)
     thor (1.0.1)
     thread_safe (0.3.6)
     tzinfo (1.2.7)
@@ -147,6 +248,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  count_component!
   jbuilder (~> 2.7)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
