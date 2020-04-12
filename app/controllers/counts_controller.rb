@@ -13,6 +13,7 @@ class CountsController < ApplicationController
   def update
     count_id = params[:id]
     CountComponent::Controls::Write::Increment.(count_id: count_id)
+
     head :ok
   end
 end
