@@ -79,7 +79,7 @@ GEM
     evt-casing (2.0.0.0)
     evt-clock (2.3.1.0)
       evt-mimic
-    evt-component_host (2.0.0.3)
+    evt-component_host (2.0.0.5)
       evt-async_invocation
       evt-casing
       evt-log

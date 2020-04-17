@@ -16,12 +16,16 @@ class CountsController < ApplicationController
 
   def update
     count_id = params[:id]
-    decrement = params[:decrement]
+    is_decrement = params[:decrement]
 
-    if decrement
-      CountComponent::Controls::Write::Decrement.(count_id: count_id)
+    handler = CountComponent::Handlers::Commands.build
+
+    if is_decrement
+      decrement = CountComponent::Controls::Commands::Decrement.example(count_id: count_id)
+      handler.handle_decrement(decrement)
     else
-      CountComponent::Controls::Write::Increment.(count_id: count_id)
+      increment = CountComponent::Controls::Commands::Increment.example(count_id: count_id)
+      handler.handle_increment(increment)
     end
 
     head :ok
